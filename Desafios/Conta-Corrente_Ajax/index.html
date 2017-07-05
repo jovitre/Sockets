@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<title> Conta Corrente </title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="script.js"></script>
+		<link type="text/css" rel="stylesheet" href="style.css">
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<center>
+			<form action="processa-operacao.php" method="post">
+				<br><input type="radio" name="op" value="debito" checked> Debito<br>
+				<input type="radio" name="op" value="credito"> Credito<br>
+				<p>Digite o valor:</p><input type="text" name="val">
+				<br><br><input type="submit" value="Submit">
+				<button type="button" name="log">Histórico de Transações</button>
+			</form>
+			<span id="valor_saldo"></span><br><br>
+			<table>
+				<thead><tr><td>Operação</td><td>Valor</td></tr></thead>
+				<tbody></tbody>
+			</table>
+		</center>
+	</body>
+</html>
